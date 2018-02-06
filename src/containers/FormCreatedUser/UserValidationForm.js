@@ -1,6 +1,7 @@
 export const email = value => {
+
 return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? 'Invalid email address'
+    ? 'email invalido'
     : undefined;	
 }
 
@@ -31,6 +32,6 @@ export const cpf = (value = '')  => {
     return validateDigit(9) && validateDigit(10) ? undefined : resultError;
 }
 
-export const number = value => value && isNaN(Number(value)) ? 'Deve ser um número' : undefined;
+export const number = value => value && isNaN(Number(value)) ? 'Deve ser só número' : undefined;
 
 export const maxLength11 = maxLength(11);

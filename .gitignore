@@ -22,3 +22,6 @@ yarn-error.log*
 
 # sass
 src/**/*.css
+
+# test unit
+__snapshots__

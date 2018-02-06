@@ -2,6 +2,25 @@
   "name": "easynvest-teste",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "bail": true,
+    "verbose": true,
+    "transformIgnorePatterns": [
+      "!node_modules/react-runtime"
+    ],
+    "setupFiles": [
+      "raf/polyfill"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
   "dependencies": {
     "lodash": "^4.17.4",
     "node-sass-chokidar": "0.0.3",
@@ -21,11 +40,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^22.1.4",
     "node-sass": "^4.7.2",
+    "react-test-renderer": "^16.2.0",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^6.0.6"
   }
